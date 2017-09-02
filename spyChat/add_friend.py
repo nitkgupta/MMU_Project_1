@@ -2,10 +2,10 @@ from globals import friends
 
 def add_friend():
     new_friend = {
-        'name': [],
-        'salutation': [],
-        'age': [],
-        'rating': [],
+        'name': '',
+        'salutation': '',
+        'age': '',
+        'rating': '',
         'is_online': False
     }
     new_friend['name'] = raw_input("Please add your friend's name: ")

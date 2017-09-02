@@ -1,6 +1,6 @@
 from spy_details import spy
 from start_chat import  start_chat
-
+import re
 print "Let's get started!"
 question = "Do you want to continue as " + spy['salutation'] + " " + spy['name'] + " (Y/N): "
 existing = raw_input(question)
@@ -13,15 +13,17 @@ if (existing.upper() == "Y") :
     start_chat(spy['name'], spy['age'], spy['rating'], spy['is_online'])
 elif (existing.upper() == "N"):
     spy['name'] = raw_input("Provide your name here :")
-    if len(spy['name']) > 0:
-        spy['salutation'] = raw_input("What should we all you ? : ")
+    pattern1='^[a-zA-Z]+$'
+    if(re.match(pattern1,spy['name'])!=None):
+        if len(spy['name']) > 0:
+            spy['salutation'] = raw_input("What should we call you ? : ")
 
-        while True:
-            try:
-                spy['age'] = int(raw_input("Enter your age. ?"))
-                break
-            except ValueError:
-                print "Invalid age. Try again."
+            while True:
+                try:
+                    spy['age'] = int(raw_input("Enter your age. ?"))
+                    break
+                except ValueError:
+                    print "Invalid age. Try again."
 
         spy['name'] = spy['salutation'] + " " + spy['name']
 

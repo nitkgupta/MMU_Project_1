@@ -10,7 +10,7 @@ def start_chat(name, age, rating, status):
         error_message = "Invalid age. Provide correct details."
         print error_message
     else:
-        welcome_message = "Authentication complete. Welcome\n Name : " + name + "\nAge: " + str(age) + "\nRating: " + str(rating) + "\nProud to have you onboard"
+        welcome_message = "Authentication complete.Welcome\n Name : " + name + "\nAge: " + str(age) + "\nRating: " + str(rating) + "\nProud to have you onboard"
         print welcome_message
 
         show_menu = True
@@ -36,4 +36,4 @@ def start_chat(name, age, rating, status):
             elif (result == 6):
                 show_menu = False
             else:
-                print "wrong choice try again."
+                print "Wrong choice try again."

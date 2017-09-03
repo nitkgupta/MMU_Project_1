@@ -1,5 +1,7 @@
 from datetime import datetime
 from select_friend import select_friend
+from spy_details import friends
+from spy_details import ChatMessage
 from steganography.steganography import Steganography
 def send_message():
     friend_choice= select_friend()
@@ -9,8 +11,8 @@ def send_message():
         output_image = raw_input("Enter the name of output image :")
         text = raw_input("Enter your message")
         Steganography.encode(original_image, output_image, text)
-        new_chat={"message":text,"time":datetime.now(),"sent_by_me":True }
-        friend[friend_choice]['chats'].append(new_chat)
+        new_chat = ChatMessage(text, True)
+        friends[friend_choice].chats.append(new_chat)
         print 'Your secret message is ready'
     else:
         print "Invalid image name. try .jpg images only."

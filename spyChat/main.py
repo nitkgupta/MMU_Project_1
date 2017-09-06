@@ -9,7 +9,7 @@ if (existing.upper() == "Y") :
 
     spy.name = spy.salutation + " " + spy.name
 
-    #Starting_chat
+    #Startingchat
     start_chat(spy.name, spy.age, spy.rating, spy.is_online)
 elif (existing.upper() == "N"):
     spy.name = raw_input("Provide your name here :")

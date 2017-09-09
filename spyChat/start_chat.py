@@ -3,6 +3,7 @@ from add_friend import add_friend
 from select_friend import select_friend
 from send_message import send_message
 from read_message import read_message
+from read_chat_history import read_chat_history
 def start_chat(name, age, rating, status):
     from globals import current_status_message
 
@@ -33,6 +34,8 @@ def start_chat(name, age, rating, status):
                 select_friend()
             elif (result == 4):
                 read_message()
+            elif (result == 5):
+                read_chat_history()
             elif (result == 6):
                 show_menu = False
             else:

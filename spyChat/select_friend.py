@@ -13,5 +13,6 @@ def select_friend():
 
     friend_choice_position = int(friend_choice) - 1
 
+
     return friend_choice_position
 

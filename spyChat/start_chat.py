@@ -31,7 +31,8 @@ def start_chat(name, age, rating, status):
                 number_of_friends = add_friend()
                 print 'You have %d friends' % (number_of_friends)
             elif (result == 3):
-                select_friend()
+                print "send message select"
+                send_message()
             elif (result == 4):
                 read_message()
             elif (result == 5):

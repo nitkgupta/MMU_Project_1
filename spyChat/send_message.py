@@ -5,7 +5,9 @@ from spy_details import friends
 from spy_details import ChatMessage
 from steganography.steganography import Steganography
 def send_message():
+
     friend_choice= select_friend()
+
 
     original_image=raw_input("Enter the name of image in which message has to be hidden :")
     pattern = '^[a-zA-Z]+\.jpg$'
